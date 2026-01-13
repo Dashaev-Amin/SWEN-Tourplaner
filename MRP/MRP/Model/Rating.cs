@@ -1,22 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MRP.Model
 {
-   public class Rating
+    public class Rating
     {
         public Rating() { }
+
         public Rating(int mediaId, int userId, int stars, string? comment)
         {
-          
             MediaId = mediaId;
             UserId = userId;
             Stars = stars;
             Comment = comment;
-            
+            Confirmed = string.IsNullOrWhiteSpace(comment);
+            Created = DateTime.Now;
         }
 
         public int Id { get; set; }
@@ -27,11 +25,10 @@ namespace MRP.Model
         public string? Comment { get; set; }
         public bool Confirmed { get; set; }
 
-        public DateTime Created { get; set; } = DateTime.Now;
+        public DateTime Created { get; set; }
         public DateTime? UpdatedAt { get; set; }
 
-       
-
-
+        // Enforces "1 like per user per rating"
+        public HashSet<int> LikedByUserIds { get; set; } = new();
     }
 }

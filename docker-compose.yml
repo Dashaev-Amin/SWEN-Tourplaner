@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:15
+    container_name: mrp-postgres
+    environment:
+      POSTGRES_USER: mrp
+      POSTGRES_PASSWORD: mrp
+      POSTGRES_DB: mrp
+    ports:
+      - "5432:5432"
+    volumes:
+      - mrp_data:/var/lib/postgresql/data
+      - ./MRP/MRP/Persistence/schema.sql:/docker-entrypoint-initdb.d/schema.sql:ro
+
+volumes:
+  mrp_data:

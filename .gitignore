@@ -1,3 +1,13 @@
-".vs/" 
-"bin/" 
-"obj/" 
+.vs/
+bin/
+obj/
+TestResults/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.log
+*.pdb
+*.cache
+*.tmp
+*.swp

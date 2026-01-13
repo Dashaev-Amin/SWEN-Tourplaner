@@ -21,6 +21,8 @@ namespace MRP.Model
         public int Id { get; set; }
         public string Username { get; set; }
         public string Password { get; set; }  
+        public string? DisplayName { get; set; }
+        public string? Bio { get; set; }
 
         public DateTime Created { get; set; } = DateTime.Now;
 
