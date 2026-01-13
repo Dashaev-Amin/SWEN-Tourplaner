@@ -20,8 +20,8 @@ namespace MRP.Model
         public int Id { get; set; }
         public int CreatorUserID { get; set; }
 
-        public string Title { get; set; }
-        public string Description { get; set; }
+        public string Title { get; set; } = string.Empty;
+        public string Description { get; set; } = string.Empty;
         public MediaType MediaType { get; set; }
         public int ReleaseYear { get; set; }
         public List<string> Genres { get; set; } = new();

@@ -1,5 +1,5 @@
-﻿using NUnit.Framework;
 using MRP.Services;
+using NUnit.Framework;
 
 namespace MRP.Tests
 {
@@ -11,8 +11,7 @@ namespace MRP.Tests
             var svc = new TokenService();
             var token = svc.Issue("alice");
 
-            Assert.That(token, Is.Not.Null);
-            Assert.That(token, Is.Not.Empty);
+            Assert.That(token, Is.Not.Null.And.Not.Empty);
         }
 
         [Test]
@@ -28,37 +27,18 @@ namespace MRP.Tests
         }
 
         [Test]
-        public void TryGetUser_MissingBearerPrefix_Fails()
+        public void TryGetUser_InvalidHeaderOrToken_Fails()
         {
             var svc = new TokenService();
             var token = svc.Issue("alice");
 
-            var ok = svc.TryGetUser(token, out var username);
+            var missingBearer = svc.TryGetUser(token, out var username1);
+            var invalidToken = svc.TryGetUser("Bearer invalid-token", out var username2);
 
-            Assert.That(ok, Is.False);
-            Assert.That(username, Is.Null.Or.Empty);
-        }
-
-        [Test]
-        public void TryGetUser_NullHeader_Fails()
-        {
-            var svc = new TokenService();
-
-            var ok = svc.TryGetUser(null, out var username);
-
-            Assert.That(ok, Is.False);
-            Assert.That(username, Is.Null.Or.Empty);
-        }
-
-        [Test]
-        public void TryGetUser_InvalidToken_Fails()
-        {
-            var svc = new TokenService();
-
-            var ok = svc.TryGetUser("Bearer this-is-not-a-valid-token", out var username);
-
-            Assert.That(ok, Is.False);
-            Assert.That(username, Is.Null.Or.Empty);
+            Assert.That(missingBearer, Is.False);
+            Assert.That(username1, Is.Null.Or.Empty);
+            Assert.That(invalidToken, Is.False);
+            Assert.That(username2, Is.Null.Or.Empty);
         }
     }
 }

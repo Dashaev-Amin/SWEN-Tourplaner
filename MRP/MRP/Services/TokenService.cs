@@ -17,11 +17,13 @@ namespace MRP.Services
         }
         public bool TryGetUser(string? bearerHeader, out string username)
         {
-            username = "";
+            username = string.Empty;
             if (string.IsNullOrWhiteSpace(bearerHeader)) return false;
             var parts = bearerHeader.Split(' ', 2, StringSplitOptions.RemoveEmptyEntries);
             if (parts.Length != 2 || !parts[0].Equals("Bearer", StringComparison.OrdinalIgnoreCase)) return false;
-            return _tokens.TryGetValue(parts[1], out username);
+            if (!_tokens.TryGetValue(parts[1], out var found)) return false;
+            username = found;
+            return true;
         }
     }
 }
