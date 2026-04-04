@@ -1,0 +1,68 @@
+<div class="form-panel">
+  <h2>{{ tour ? 'Tour bearbeiten' : 'Neue Tour' }}</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Name *</label>
+      <input id="name" formControlName="name" type="text" placeholder="Tour Name">
+      @if (form.get('name')?.invalid && form.get('name')?.touched) {
+        <span class="error">Name ist erforderlich</span>
+      }
+    </div>
+
+    <div class="form-group">
+      <label for="description">Beschreibung</label>
+      <textarea id="description" formControlName="description" rows="3" placeholder="Optionale Beschreibung"></textarea>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="from">Von *</label>
+        <input id="from" formControlName="from" type="text" placeholder="Startpunkt">
+        @if (form.get('from')?.invalid && form.get('from')?.touched) {
+          <span class="error">Startpunkt ist erforderlich</span>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="to">Nach *</label>
+        <input id="to" formControlName="to" type="text" placeholder="Zielpunkt">
+        @if (form.get('to')?.invalid && form.get('to')?.touched) {
+          <span class="error">Zielpunkt ist erforderlich</span>
+        }
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="transportType">Transportmittel *</label>
+      <select id="transportType" formControlName="transportType">
+        @for (type of transportTypes; track type) {
+          <option [value]="type">{{ type }}</option>
+        }
+      </select>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="distance">Distanz (km)</label>
+        <input id="distance" formControlName="distance" type="number" min="0">
+        @if (form.get('distance')?.errors?.['min']) {
+          <span class="error">Muss >= 0 sein</span>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="estimatedTime">Geschaetzte Zeit (h)</label>
+        <input id="estimatedTime" formControlName="estimatedTime" type="number" min="0">
+        @if (form.get('estimatedTime')?.errors?.['min']) {
+          <span class="error">Muss >= 0 sein</span>
+        }
+      </div>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">Speichern</button>
+      <button type="button" class="btn btn-secondary" (click)="onCancel()">Abbrechen</button>
+    </div>
+  </form>
+</div>

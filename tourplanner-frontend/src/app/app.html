@@ -1,0 +1,67 @@
+<!-- Navbar -->
+<nav class="navbar">
+  <h1>TourPlanner</h1>
+</nav>
+
+<!-- Main Content -->
+<div class="main-container">
+  <!-- Tour Form (overlay wenn offen) -->
+  @if (showTourForm) {
+    <div class="form-overlay">
+      <app-tour-form
+        [tour]="editingTour"
+        (save)="onTourFormSave($event)"
+        (cancel)="onTourFormCancel()"
+      ></app-tour-form>
+    </div>
+  }
+
+  <!-- Log Form -->
+  @if (showLogForm) {
+    <div class="form-overlay">
+      <app-tour-log-form
+        [log]="editingLog"
+        (save)="onLogFormSave($event)"
+        (cancel)="onLogFormCancel()"
+      ></app-tour-log-form>
+    </div>
+  }
+
+  <!-- Confirm Dialog -->
+  @if (showConfirmDialog) {
+    <app-confirm-dialog
+      [title]="confirmTitle"
+      [message]="confirmMessage"
+      (confirmed)="onConfirmResult($event)"
+    ></app-confirm-dialog>
+  }
+
+  <div class="content-grid">
+    <!-- Linke Spalte: Tour Liste -->
+    <div class="left-panel">
+      <app-tour-list
+        [tours]="tours"
+        [selectedTourId]="selectedTour?.id ?? null"
+        (tourSelected)="onTourSelected($event)"
+        (createNew)="onCreateTour()"
+      ></app-tour-list>
+    </div>
+
+    <!-- Rechte Spalte: Detail + Logs -->
+    <div class="right-panel">
+      <app-tour-detail
+        [tour]="selectedTour"
+        (editTour)="onEditTour($event)"
+        (deleteTour)="onDeleteTour($event)"
+      ></app-tour-detail>
+
+      <app-tour-log-list
+        [logs]="tourLogs"
+        [tourId]="selectedTour?.id ?? null"
+        (createLog)="onCreateLog()"
+        (editLog)="onEditLog($event)"
+        (deleteLog)="onDeleteLog($event)"
+      ></app-tour-log-list>
+    </div>
+  </div>
+</div>

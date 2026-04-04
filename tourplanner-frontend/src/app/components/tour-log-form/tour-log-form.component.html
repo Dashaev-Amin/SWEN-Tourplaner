@@ -1,0 +1,61 @@
+<div class="form-panel">
+  <h3>{{ log ? 'Log bearbeiten' : 'Neuer Log' }}</h3>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="form-row">
+      <div class="form-group">
+        <label for="dateTime">Datum *</label>
+        <input id="dateTime" formControlName="dateTime" type="date">
+        @if (form.get('dateTime')?.invalid && form.get('dateTime')?.touched) {
+          <span class="error">Datum ist erforderlich</span>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="difficulty">Schwierigkeit *</label>
+        <select id="difficulty" formControlName="difficulty">
+          @for (d of difficulties; track d) {
+            <option [value]="d">{{ d }}</option>
+          }
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="rating">Bewertung *</label>
+        <select id="rating" formControlName="rating">
+          @for (r of ratings; track r) {
+            <option [value]="r">{{ r }}</option>
+          }
+        </select>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="totalDistance">Distanz (km) *</label>
+        <input id="totalDistance" formControlName="totalDistance" type="number" min="0">
+        @if (form.get('totalDistance')?.errors?.['min']) {
+          <span class="error">Muss >= 0 sein</span>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="totalTime">Zeit (h) *</label>
+        <input id="totalTime" formControlName="totalTime" type="number" min="0">
+        @if (form.get('totalTime')?.errors?.['min']) {
+          <span class="error">Muss >= 0 sein</span>
+        }
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="comment">Kommentar</label>
+      <textarea id="comment" formControlName="comment" rows="3" placeholder="Optional"></textarea>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" class="btn btn-primary">Speichern</button>
+      <button type="button" class="btn btn-secondary" (click)="onCancel()">Abbrechen</button>
+    </div>
+  </form>
+</div>

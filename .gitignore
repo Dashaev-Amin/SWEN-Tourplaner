@@ -1,13 +1,46 @@
-.vs/
-**/bin/
-**/obj/
-TestResults/
+## .NET
+bin/
+obj/
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
-*.log
-*.pdb
-*.cache
-*.tmp
+.vs/
+*.DotSettings.user
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+build/
+bld/
+
+## NuGet
+*.nupkg
+**/packages/*
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+## Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+## IDE
+.idea/
 *.swp
+*.swo
+*~
+.vscode/
+
+## OS
+Thumbs.db
+.DS_Store
+
+## Claude
+.claude/
+
+## Misc
+*.log

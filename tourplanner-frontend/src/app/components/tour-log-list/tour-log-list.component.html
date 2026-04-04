@@ -1,0 +1,46 @@
+<div class="log-list-panel">
+  <div class="panel-header">
+    <h3>Tour Logs</h3>
+    @if (tourId) {
+      <button class="btn btn-primary btn-sm" (click)="onCreateLog()">+ Neuer Log</button>
+    }
+  </div>
+
+  @if (!tourId) {
+    <p class="empty-msg">Waehle zuerst eine Tour aus</p>
+  } @else if (logs.length === 0) {
+    <p class="empty-msg">Keine Logs vorhanden</p>
+  } @else {
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Datum</th>
+            <th>Schwierigkeit</th>
+            <th>Distanz</th>
+            <th>Zeit</th>
+            <th>Bewertung</th>
+            <th>Kommentar</th>
+            <th>Aktionen</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (log of logs; track log.id) {
+            <tr>
+              <td>{{ log.dateTime | date:'dd.MM.yyyy' }}</td>
+              <td>{{ log.difficulty }}/5</td>
+              <td>{{ log.totalDistance }} km</td>
+              <td>{{ log.totalTime }} h</td>
+              <td>{{ log.rating }}/5</td>
+              <td>{{ truncate(log.comment) }}</td>
+              <td class="action-cell">
+                <button class="btn btn-sm btn-secondary" (click)="onEdit(log)">Edit</button>
+                <button class="btn btn-sm btn-danger" (click)="onDelete(log)">Del</button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

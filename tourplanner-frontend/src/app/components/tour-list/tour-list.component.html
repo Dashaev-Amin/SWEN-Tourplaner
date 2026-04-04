@@ -1,0 +1,26 @@
+<div class="tour-list-panel">
+  <div class="panel-header">
+    <h2>Touren</h2>
+    <button class="btn btn-primary" (click)="onCreateNew()">+ Neue Tour</button>
+  </div>
+
+  <div class="tour-items">
+    @if (tours.length === 0) {
+      <p class="empty-msg">Keine Touren vorhanden</p>
+    }
+
+    @for (tour of tours; track tour.id) {
+      <div
+        class="tour-item"
+        [class.selected]="tour.id === selectedTourId"
+        (click)="selectTour(tour)"
+      >
+        <div class="tour-name">{{ tour.name }}</div>
+        <div class="tour-info">
+          <span class="transport-badge">{{ tour.transportType }}</span>
+          <span>{{ tour.distance }} km</span>
+        </div>
+      </div>
+    }
+  </div>
+</div>

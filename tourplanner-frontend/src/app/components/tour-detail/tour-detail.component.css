@@ -1,0 +1,73 @@
+.tour-detail-panel {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.no-selection {
+  padding: 40px;
+  text-align: center;
+  color: #999;
+}
+
+.detail-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.detail-header h2 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.detail-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.detail-body {
+  padding: 16px;
+}
+
+.detail-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 2px;
+}
+
+.description {
+  margin-bottom: 16px;
+}
+
+.description p {
+  margin: 4px 0 0 0;
+  color: #555;
+}
+
+.map-placeholder {
+  background: #e8e8e8;
+  border-radius: 8px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  border: 2px dashed #ccc;
+}
