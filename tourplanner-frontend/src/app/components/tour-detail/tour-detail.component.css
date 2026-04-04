@@ -61,10 +61,28 @@
   color: #555;
 }
 
+.tour-image img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.image-placeholder {
+  background: #e8e8e8;
+  border-radius: 8px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #999;
+  border: 2px dashed #ccc;
+  margin-bottom: 12px;
+}
+
 .map-placeholder {
   background: #e8e8e8;
   border-radius: 8px;
-  height: 200px;
+  height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;

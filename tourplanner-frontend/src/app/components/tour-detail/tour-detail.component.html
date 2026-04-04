@@ -47,6 +47,17 @@
         </div>
       }
 
+      <!-- Tourbild oder Platzhalter -->
+      @if (tour.routeImage) {
+        <div class="tour-image">
+          <img [src]="tour.routeImage" alt="Tourbild">
+        </div>
+      } @else {
+        <div class="image-placeholder">
+          <p>Kein Bild</p>
+        </div>
+      }
+
       <!-- Karten-Platzhalter -->
       <div class="map-placeholder">
         <p>Karte wird spaeter hier angezeigt</p>
