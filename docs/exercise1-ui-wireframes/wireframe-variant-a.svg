@@ -1,0 +1,141 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="1200" height="800" fill="white"/>
+
+  <!-- HEADER -->
+  <rect x="0" y="0" width="1200" height="60" fill="white" stroke="#222" stroke-width="2"/>
+  <text x="20" y="38" font-size="20" font-weight="bold" fill="#222">TourPlanner</text>
+  <circle cx="1160" cy="30" r="14" fill="white" stroke="#222" stroke-width="2"/>
+  <text x="1160" y="30" font-size="12" fill="#222" text-anchor="middle" dominant-baseline="central">A</text>
+
+  <!-- BREADCRUMB -->
+  <text x="20" y="85" font-size="13" fill="#555">Home / Tours</text>
+
+  <!-- SIDEBAR DIVIDER -->
+  <line x1="280" y1="60" x2="280" y2="800" stroke="#222" stroke-width="2"/>
+
+  <!-- SIDEBAR -->
+  <text x="20" y="130" font-size="16" font-weight="bold" fill="#222">Filters</text>
+
+  <rect x="20" y="150" width="240" height="36" fill="white" stroke="#222" stroke-width="2" rx="4"/>
+  <text x="36" y="173" font-size="13" fill="#888">Search tours...</text>
+
+  <text x="20" y="215" font-size="13" font-weight="bold" fill="#222">Distance (km)</text>
+  <rect x="20" y="225" width="110" height="32" fill="white" stroke="#222" stroke-width="2" rx="4"/>
+  <text x="36" y="246" font-size="13" fill="#888">Min</text>
+  <rect x="140" y="225" width="120" height="32" fill="white" stroke="#222" stroke-width="2" rx="4"/>
+  <text x="156" y="246" font-size="13" fill="#888">Max</text>
+
+  <text x="20" y="290" font-size="13" font-weight="bold" fill="#222">Difficulty</text>
+  <rect x="20" y="300" width="14" height="14" fill="white" stroke="#222" stroke-width="2" rx="2"/>
+  <text x="44" y="313" font-size="13" fill="#222">Easy</text>
+  <rect x="20" y="324" width="14" height="14" fill="white" stroke="#222" stroke-width="2" rx="2"/>
+  <text x="44" y="337" font-size="13" fill="#222">Medium</text>
+  <rect x="20" y="348" width="14" height="14" fill="white" stroke="#222" stroke-width="2" rx="2"/>
+  <text x="44" y="361" font-size="13" fill="#222">Hard</text>
+  <rect x="20" y="372" width="14" height="14" fill="white" stroke="#222" stroke-width="2" rx="2"/>
+  <text x="44" y="385" font-size="13" fill="#222">Expert</text>
+
+  <text x="20" y="425" font-size="13" font-weight="bold" fill="#222">Date Range</text>
+  <rect x="20" y="435" width="240" height="32" fill="white" stroke="#222" stroke-width="2" rx="4"/>
+  <text x="36" y="456" font-size="13" fill="#888">From — To</text>
+
+  <text x="20" y="500" font-size="13" font-weight="bold" fill="#222">Min Rating</text>
+  <text x="20" y="525" font-size="16" fill="#222">☆ ☆ ☆ ☆ ☆</text>
+
+  <rect x="20" y="565" width="240" height="40" fill="#222" stroke="#222" stroke-width="2" rx="4"/>
+  <text x="140" y="585" font-size="13" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="central">Apply Filters</text>
+  <rect x="20" y="615" width="240" height="40" fill="white" stroke="#222" stroke-width="2" rx="4"/>
+  <text x="140" y="635" font-size="13" fill="#222" text-anchor="middle" dominant-baseline="central">Reset</text>
+
+  <!-- MAIN CONTENT -->
+  <text x="300" y="130" font-size="22" font-weight="bold" fill="#222">Tours</text>
+  <text x="300" y="155" font-size="12" fill="#777">23 results</text>
+
+  <rect x="1080" y="115" width="100" height="36" fill="#222" stroke="#222" stroke-width="2" rx="4"/>
+  <text x="1130" y="135" font-size="13" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="central">+ New Tour</text>
+
+  <line x1="300" y1="180" x2="1180" y2="180" stroke="#222" stroke-width="2"/>
+  <text x="305" y="205" font-size="13" font-weight="bold" fill="#222">Name ↕</text>
+  <text x="545" y="205" font-size="13" font-weight="bold" fill="#222">Distance ↕</text>
+  <text x="665" y="205" font-size="13" font-weight="bold" fill="#222">Duration ↕</text>
+  <text x="785" y="205" font-size="13" font-weight="bold" fill="#222">Difficulty</text>
+  <text x="900" y="205" font-size="13" font-weight="bold" fill="#222">Rating ↕</text>
+  <text x="1010" y="205" font-size="13" font-weight="bold" fill="#222">Actions</text>
+  <line x1="300" y1="220" x2="1180" y2="220" stroke="#222" stroke-width="2"/>
+
+  <text x="305" y="248" font-size="13" fill="#222">Vienna City Loop</text>
+  <text x="545" y="248" font-size="13" fill="#222">12.4 km</text>
+  <text x="665" y="248" font-size="13" fill="#222">3h 20m</text>
+  <text x="785" y="248" font-size="13" fill="#222">Easy</text>
+  <text x="900" y="248" font-size="13" fill="#222">★★★★☆</text>
+  <text x="1010" y="248" font-size="13" fill="#3366FF">Edit · Del</text>
+  <line x1="300" y1="262" x2="1180" y2="262" stroke="#ccc" stroke-width="1"/>
+
+  <text x="305" y="290" font-size="13" fill="#222">Schneeberg Summit</text>
+  <text x="545" y="290" font-size="13" fill="#222">18.7 km</text>
+  <text x="665" y="290" font-size="13" fill="#222">6h 45m</text>
+  <text x="785" y="290" font-size="13" fill="#222">Hard</text>
+  <text x="900" y="290" font-size="13" fill="#222">★★★★★</text>
+  <text x="1010" y="290" font-size="13" fill="#3366FF">Edit · Del</text>
+  <line x1="300" y1="304" x2="1180" y2="304" stroke="#ccc" stroke-width="1"/>
+
+  <text x="305" y="332" font-size="13" fill="#222">Wachau Valley Trail</text>
+  <text x="545" y="332" font-size="13" fill="#222">24.1 km</text>
+  <text x="665" y="332" font-size="13" fill="#222">7h 10m</text>
+  <text x="785" y="332" font-size="13" fill="#222">Medium</text>
+  <text x="900" y="332" font-size="13" fill="#222">★★★★☆</text>
+  <text x="1010" y="332" font-size="13" fill="#3366FF">Edit · Del</text>
+  <line x1="300" y1="346" x2="1180" y2="346" stroke="#ccc" stroke-width="1"/>
+
+  <text x="305" y="374" font-size="13" fill="#222">Donauinsel Run</text>
+  <text x="545" y="374" font-size="13" fill="#222">8.2 km</text>
+  <text x="665" y="374" font-size="13" fill="#222">1h 30m</text>
+  <text x="785" y="374" font-size="13" fill="#222">Easy</text>
+  <text x="900" y="374" font-size="13" fill="#222">★★★☆☆</text>
+  <text x="1010" y="374" font-size="13" fill="#3366FF">Edit · Del</text>
+  <line x1="300" y1="388" x2="1180" y2="388" stroke="#ccc" stroke-width="1"/>
+
+  <text x="305" y="416" font-size="13" fill="#222">Hohe Wand Hike</text>
+  <text x="545" y="416" font-size="13" fill="#222">14.5 km</text>
+  <text x="665" y="416" font-size="13" fill="#222">5h 15m</text>
+  <text x="785" y="416" font-size="13" fill="#222">Medium</text>
+  <text x="900" y="416" font-size="13" fill="#222">★★★★★</text>
+  <text x="1010" y="416" font-size="13" fill="#3366FF">Edit · Del</text>
+  <line x1="300" y1="430" x2="1180" y2="430" stroke="#ccc" stroke-width="1"/>
+
+  <text x="305" y="458" font-size="13" fill="#222">Rax Plateau Loop</text>
+  <text x="545" y="458" font-size="13" fill="#222">22.0 km</text>
+  <text x="665" y="458" font-size="13" fill="#222">8h 00m</text>
+  <text x="785" y="458" font-size="13" fill="#222">Expert</text>
+  <text x="900" y="458" font-size="13" fill="#222">★★★★☆</text>
+  <text x="1010" y="458" font-size="13" fill="#3366FF">Edit · Del</text>
+  <line x1="300" y1="472" x2="1180" y2="472" stroke="#ccc" stroke-width="1"/>
+
+  <text x="305" y="500" font-size="13" fill="#222">Kahlenberg Walk</text>
+  <text x="545" y="500" font-size="13" fill="#222">6.0 km</text>
+  <text x="665" y="500" font-size="13" fill="#222">1h 45m</text>
+  <text x="785" y="500" font-size="13" fill="#222">Easy</text>
+  <text x="900" y="500" font-size="13" fill="#222">★★★☆☆</text>
+  <text x="1010" y="500" font-size="13" fill="#3366FF">Edit · Del</text>
+  <line x1="300" y1="514" x2="1180" y2="514" stroke="#ccc" stroke-width="1"/>
+
+  <text x="300" y="555" font-size="12" fill="#777">Showing 7 of 23</text>
+  <rect x="1080" y="538" width="40" height="28" fill="white" stroke="#222" stroke-width="2" rx="4"/>
+  <text x="1100" y="552" font-size="14" fill="#222" text-anchor="middle" dominant-baseline="central">←</text>
+  <rect x="1130" y="538" width="40" height="28" fill="white" stroke="#222" stroke-width="2" rx="4"/>
+  <text x="1150" y="552" font-size="14" fill="#222" text-anchor="middle" dominant-baseline="central">→</text>
+
+  <!-- ANNOTATION MARKERS -->
+  <g>
+    <circle cx="150" cy="130" r="14" fill="#3366FF"/>
+    <text x="150" y="130" font-size="14" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="central">1</text>
+  </g>
+  <g>
+    <circle cx="370" cy="205" r="14" fill="#3366FF"/>
+    <text x="370" y="205" font-size="14" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="central">2</text>
+  </g>
+  <g>
+    <circle cx="1075" cy="248" r="14" fill="#3366FF"/>
+    <text x="1075" y="248" font-size="14" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="central">3</text>
+  </g>
+</svg>

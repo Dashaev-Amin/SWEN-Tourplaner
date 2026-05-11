@@ -1,0 +1,130 @@
+<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="1200" height="800" fill="white"/>
+
+  <!-- HEADER -->
+  <rect x="0" y="0" width="1200" height="60" fill="white" stroke="#222" stroke-width="2"/>
+  <text x="20" y="38" font-size="20" font-weight="bold" fill="#222">TourPlanner</text>
+  <circle cx="1160" cy="30" r="14" fill="white" stroke="#222" stroke-width="2"/>
+  <text x="1160" y="30" font-size="12" fill="#222" text-anchor="middle" dominant-baseline="central">A</text>
+
+  <!-- BREADCRUMB -->
+  <text x="20" y="85" font-size="13" fill="#555">Home / Tours</text>
+
+  <!-- BIG SEARCH BAR -->
+  <rect x="200" y="110" width="800" height="56" fill="white" stroke="#222" stroke-width="2" rx="28"/>
+  <circle cx="240" cy="138" r="10" fill="white" stroke="#222" stroke-width="2"/>
+  <line x1="248" y1="146" x2="256" y2="154" stroke="#222" stroke-width="2"/>
+  <text x="280" y="144" font-size="16" fill="#888">Find your next tour...</text>
+
+  <!-- FILTER CHIPS -->
+  <rect x="200" y="190" width="60" height="32" fill="#222" stroke="#222" stroke-width="2" rx="16"/>
+  <text x="230" y="206" font-size="13" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="central">All</text>
+
+  <rect x="270" y="190" width="80" height="32" fill="white" stroke="#222" stroke-width="2" rx="16"/>
+  <text x="310" y="206" font-size="13" fill="#222" text-anchor="middle" dominant-baseline="central">Easy</text>
+
+  <rect x="360" y="190" width="90" height="32" fill="white" stroke="#222" stroke-width="2" rx="16"/>
+  <text x="405" y="206" font-size="13" fill="#222" text-anchor="middle" dominant-baseline="central">&lt; 10 km</text>
+
+  <rect x="460" y="190" width="110" height="32" fill="white" stroke="#222" stroke-width="2" rx="16"/>
+  <text x="515" y="206" font-size="13" fill="#222" text-anchor="middle" dominant-baseline="central">This Month</text>
+
+  <rect x="580" y="190" width="100" height="32" fill="white" stroke="#222" stroke-width="2" rx="16"/>
+  <text x="630" y="206" font-size="13" fill="#222" text-anchor="middle" dominant-baseline="central">Top Rated</text>
+
+  <rect x="690" y="190" width="130" height="32" fill="white" stroke="#222" stroke-width="2" stroke-dasharray="4 2" rx="16"/>
+  <text x="755" y="206" font-size="13" fill="#222" text-anchor="middle" dominant-baseline="central">+ More Filters</text>
+
+  <!-- RESULT COUNT -->
+  <text x="40" y="252" font-size="13" fill="#777">23 tours found</text>
+
+  <!-- CARD 1 -->
+  <rect x="40" y="265" width="360" height="220" fill="white" stroke="#222" stroke-width="2" rx="6"/>
+  <rect x="40" y="265" width="360" height="100" fill="#f5f5f5" stroke="#222" stroke-width="2"/>
+  <line x1="40" y1="265" x2="400" y2="365" stroke="#bbb" stroke-width="1"/>
+  <line x1="400" y1="265" x2="40" y2="365" stroke="#bbb" stroke-width="1"/>
+  <text x="220" y="320" font-size="13" fill="#888" text-anchor="middle">Map Preview</text>
+  <text x="56" y="390" font-size="16" font-weight="bold" fill="#222">Vienna City Loop</text>
+  <text x="56" y="415" font-size="13" fill="#555">Distance: 12.4 km · Duration: 3h 20m</text>
+  <rect x="56" y="430" width="60" height="22" fill="white" stroke="#222" stroke-width="2" rx="11"/>
+  <text x="86" y="441" font-size="12" fill="#222" text-anchor="middle" dominant-baseline="central">Easy</text>
+  <text x="56" y="473" font-size="14" fill="#222">★★★★☆ 4.2</text>
+
+  <!-- CARD 2 -->
+  <rect x="420" y="265" width="360" height="220" fill="white" stroke="#222" stroke-width="2" rx="6"/>
+  <rect x="420" y="265" width="360" height="100" fill="#f5f5f5" stroke="#222" stroke-width="2"/>
+  <line x1="420" y1="265" x2="780" y2="365" stroke="#bbb" stroke-width="1"/>
+  <line x1="780" y1="265" x2="420" y2="365" stroke="#bbb" stroke-width="1"/>
+  <text x="600" y="320" font-size="13" fill="#888" text-anchor="middle">Map Preview</text>
+  <text x="436" y="390" font-size="16" font-weight="bold" fill="#222">Schneeberg Summit</text>
+  <text x="436" y="415" font-size="13" fill="#555">Distance: 18.7 km · Duration: 6h 45m</text>
+  <rect x="436" y="430" width="60" height="22" fill="white" stroke="#222" stroke-width="2" rx="11"/>
+  <text x="466" y="441" font-size="12" fill="#222" text-anchor="middle" dominant-baseline="central">Hard</text>
+  <text x="436" y="473" font-size="14" fill="#222">★★★★★ 4.8</text>
+
+  <!-- CARD 3 -->
+  <rect x="800" y="265" width="360" height="220" fill="white" stroke="#222" stroke-width="2" rx="6"/>
+  <rect x="800" y="265" width="360" height="100" fill="#f5f5f5" stroke="#222" stroke-width="2"/>
+  <line x1="800" y1="265" x2="1160" y2="365" stroke="#bbb" stroke-width="1"/>
+  <line x1="1160" y1="265" x2="800" y2="365" stroke="#bbb" stroke-width="1"/>
+  <text x="980" y="320" font-size="13" fill="#888" text-anchor="middle">Map Preview</text>
+  <text x="816" y="390" font-size="16" font-weight="bold" fill="#222">Wachau Valley Trail</text>
+  <text x="816" y="415" font-size="13" fill="#555">Distance: 24.1 km · Duration: 7h 10m</text>
+  <rect x="816" y="430" width="80" height="22" fill="white" stroke="#222" stroke-width="2" rx="11"/>
+  <text x="856" y="441" font-size="12" fill="#222" text-anchor="middle" dominant-baseline="central">Medium</text>
+  <text x="816" y="473" font-size="14" fill="#222">★★★★☆ 4.1</text>
+
+  <!-- CARD 4 -->
+  <rect x="40" y="505" width="360" height="220" fill="white" stroke="#222" stroke-width="2" rx="6"/>
+  <rect x="40" y="505" width="360" height="100" fill="#f5f5f5" stroke="#222" stroke-width="2"/>
+  <line x1="40" y1="505" x2="400" y2="605" stroke="#bbb" stroke-width="1"/>
+  <line x1="400" y1="505" x2="40" y2="605" stroke="#bbb" stroke-width="1"/>
+  <text x="220" y="560" font-size="13" fill="#888" text-anchor="middle">Map Preview</text>
+  <text x="56" y="630" font-size="16" font-weight="bold" fill="#222">Donauinsel Run</text>
+  <text x="56" y="655" font-size="13" fill="#555">Distance: 8.2 km · Duration: 1h 30m</text>
+  <rect x="56" y="670" width="60" height="22" fill="white" stroke="#222" stroke-width="2" rx="11"/>
+  <text x="86" y="681" font-size="12" fill="#222" text-anchor="middle" dominant-baseline="central">Easy</text>
+  <text x="56" y="713" font-size="14" fill="#222">★★★☆☆ 3.5</text>
+
+  <!-- CARD 5 -->
+  <rect x="420" y="505" width="360" height="220" fill="white" stroke="#222" stroke-width="2" rx="6"/>
+  <rect x="420" y="505" width="360" height="100" fill="#f5f5f5" stroke="#222" stroke-width="2"/>
+  <line x1="420" y1="505" x2="780" y2="605" stroke="#bbb" stroke-width="1"/>
+  <line x1="780" y1="505" x2="420" y2="605" stroke="#bbb" stroke-width="1"/>
+  <text x="600" y="560" font-size="13" fill="#888" text-anchor="middle">Map Preview</text>
+  <text x="436" y="630" font-size="16" font-weight="bold" fill="#222">Hohe Wand Hike</text>
+  <text x="436" y="655" font-size="13" fill="#555">Distance: 14.5 km · Duration: 5h 15m</text>
+  <rect x="436" y="670" width="80" height="22" fill="white" stroke="#222" stroke-width="2" rx="11"/>
+  <text x="476" y="681" font-size="12" fill="#222" text-anchor="middle" dominant-baseline="central">Medium</text>
+  <text x="436" y="713" font-size="14" fill="#222">★★★★★ 4.6</text>
+
+  <!-- CARD 6 -->
+  <rect x="800" y="505" width="360" height="220" fill="white" stroke="#222" stroke-width="2" rx="6"/>
+  <rect x="800" y="505" width="360" height="100" fill="#f5f5f5" stroke="#222" stroke-width="2"/>
+  <line x1="800" y1="505" x2="1160" y2="605" stroke="#bbb" stroke-width="1"/>
+  <line x1="1160" y1="505" x2="800" y2="605" stroke="#bbb" stroke-width="1"/>
+  <text x="980" y="560" font-size="13" fill="#888" text-anchor="middle">Map Preview</text>
+  <text x="816" y="630" font-size="16" font-weight="bold" fill="#222">Rax Plateau Loop</text>
+  <text x="816" y="655" font-size="13" fill="#555">Distance: 22.0 km · Duration: 8h 00m</text>
+  <rect x="816" y="670" width="70" height="22" fill="white" stroke="#222" stroke-width="2" rx="11"/>
+  <text x="851" y="681" font-size="12" fill="#222" text-anchor="middle" dominant-baseline="central">Expert</text>
+  <text x="816" y="713" font-size="14" fill="#222">★★★★☆ 4.3</text>
+
+  <!-- LOAD MORE -->
+  <rect x="540" y="750" width="120" height="32" fill="white" stroke="#222" stroke-width="2" rx="16"/>
+  <text x="600" y="766" font-size="13" fill="#222" text-anchor="middle" dominant-baseline="central">Load more</text>
+
+  <!-- ANNOTATION MARKERS -->
+  <g>
+    <circle cx="970" cy="138" r="14" fill="#3366FF"/>
+    <text x="970" y="138" font-size="14" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="central">1</text>
+  </g>
+  <g>
+    <circle cx="310" cy="232" r="14" fill="#3366FF"/>
+    <text x="310" y="232" font-size="14" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="central">2</text>
+  </g>
+  <g>
+    <circle cx="380" cy="285" r="14" fill="#3366FF"/>
+    <text x="380" y="285" font-size="14" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="central">3</text>
+  </g>
+</svg>
