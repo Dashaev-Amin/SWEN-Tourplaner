@@ -44,6 +44,9 @@
         [selectedTourId]="selectedTour?.id ?? null"
         (tourSelected)="onTourSelected($event)"
         (createNew)="onCreateTour()"
+        (searchChanged)="onSearch($event)"
+        (exportTours)="onExport()"
+        (importFile)="onImport($event)"
       ></app-tour-list>
     </div>
 
@@ -53,6 +56,7 @@
         [tour]="selectedTour"
         (editTour)="onEditTour($event)"
         (deleteTour)="onDeleteTour($event)"
+        (downloadGpx)="onDownloadGpx($event)"
       ></app-tour-detail>
 
       <app-tour-log-list

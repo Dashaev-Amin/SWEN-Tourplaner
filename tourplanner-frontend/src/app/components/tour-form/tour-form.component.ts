@@ -17,7 +17,7 @@ export class TourFormComponent implements OnInit, OnChanges {
 
   form!: FormGroup;
 
-  transportTypes = ['bike', 'hike', 'running', 'vacation'];
+  transportTypes = ['Car', 'Bike', 'Hiking', 'Running'];
 
   constructor(private fb: FormBuilder) {}
 
@@ -35,9 +35,7 @@ export class TourFormComponent implements OnInit, OnChanges {
       description: [this.tour?.description || ''],
       from: [this.tour?.from || '', Validators.required],
       to: [this.tour?.to || '', Validators.required],
-      transportType: [this.tour?.transportType || 'bike', Validators.required],
-      distance: [this.tour?.distance || 0, [Validators.required, Validators.min(0)]],
-      estimatedTime: [this.tour?.estimatedTime || 0, [Validators.required, Validators.min(0)]],
+      transportType: [this.tour?.transportType || 'Car', Validators.required],
     });
   }
 

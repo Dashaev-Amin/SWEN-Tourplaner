@@ -39,5 +39,19 @@ yarn-error.log
 Thumbs.db
 .DS_Store
 
+## Environment-specific config (Credentials!)
+appsettings.Development.json
+
+## Angular build output
+dist/
+.angular/
+
+## Generated map images
+Images/
+
+## Claude Code helper files
+.claude/
+CLAUDE.md
+
 ## Misc
 *.log

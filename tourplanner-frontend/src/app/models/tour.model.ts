@@ -8,5 +8,10 @@ export interface Tour {
   distance: number;
   estimatedTime: number;
   routeImage: string | null;
+  routeGeometry: string | null;
   createdAt: string;
+  // Berechnete Attribute (vom Backend geliefert)
+  popularityCount: number;
+  popularityLevel: string;
+  childFriendliness: string;
 }

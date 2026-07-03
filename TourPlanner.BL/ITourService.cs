@@ -9,5 +9,7 @@ namespace TourPlanner.BL
         Task<Tour> CreateAsync(Tour tour);
         Task<Tour> UpdateAsync(Tour tour);
         Task DeleteAsync(Guid id);
+        Task<IEnumerable<Tour>> SearchAsync(string query);
+        Task<IEnumerable<Tour>> ImportAsync(IEnumerable<Tour> tours);
     }
 }

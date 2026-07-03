@@ -4,6 +4,21 @@
     <button class="btn btn-primary" (click)="onCreateNew()">+ Neue Tour</button>
   </div>
 
+  <div class="action-bar">
+    <button class="btn btn-sm btn-secondary" (click)="onExport()">Export</button>
+    <button class="btn btn-sm btn-secondary" (click)="onImportClick()">Import</button>
+    <input #fileInput type="file" accept=".json" (change)="onFileSelected($event)" hidden>
+  </div>
+
+  <div class="search-bar">
+    <input
+      type="text"
+      [(ngModel)]="searchQuery"
+      (input)="onSearchInput()"
+      placeholder="Suche (Name, Ort, Transportmittel, ...)"
+    >
+  </div>
+
   <div class="tour-items">
     @if (tours.length === 0) {
       <p class="empty-msg">Keine Touren vorhanden</p>

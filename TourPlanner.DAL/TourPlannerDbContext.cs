@@ -17,6 +17,11 @@ namespace TourPlanner.DAL
                 .WithOne(tl => tl.Tour)
                 .HasForeignKey(tl => tl.TourId)
                 .OnDelete(DeleteBehavior.Cascade);
+
+            // TransportType als String in der DB speichern
+            modelBuilder.Entity<Tour>()
+                .Property(t => t.TransportType)
+                .HasConversion<string>();
         }
     }
 }

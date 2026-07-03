@@ -42,23 +42,7 @@
       </select>
     </div>
 
-    <div class="form-row">
-      <div class="form-group">
-        <label for="distance">Distanz (km)</label>
-        <input id="distance" formControlName="distance" type="number" min="0">
-        @if (form.get('distance')?.errors?.['min']) {
-          <span class="error">Muss >= 0 sein</span>
-        }
-      </div>
-
-      <div class="form-group">
-        <label for="estimatedTime">Geschaetzte Zeit (h)</label>
-        <input id="estimatedTime" formControlName="estimatedTime" type="number" min="0">
-        @if (form.get('estimatedTime')?.errors?.['min']) {
-          <span class="error">Muss >= 0 sein</span>
-        }
-      </div>
-    </div>
+    <p class="auto-hint">Distanz und Zeit werden automatisch berechnet.</p>
 
     <div class="form-actions">
       <button type="submit" class="btn btn-primary">Speichern</button>

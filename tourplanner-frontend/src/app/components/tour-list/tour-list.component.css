@@ -19,6 +19,31 @@
   color: #333;
 }
 
+.action-bar {
+  display: flex;
+  gap: 8px;
+  padding: 8px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.search-bar {
+  padding: 8px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.search-bar input:focus {
+  border-color: #2196F3;
+}
+
 .tour-items {
   max-height: 500px;
   overflow-y: auto;

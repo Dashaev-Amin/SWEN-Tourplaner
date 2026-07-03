@@ -30,4 +30,24 @@ export class TourService {
   deleteTour(id: string): Observable<void> {
     return this.http.delete<void>(`${this.baseUrl}/${id}`);
   }
+
+  searchTours(query: string): Observable<Tour[]> {
+    return this.http.get<Tour[]>(`${this.baseUrl}/search`, {
+      params: { q: query }
+    });
+  }
+
+  exportTours(): void {
+    window.location.href = `${this.baseUrl}/export`;
+  }
+
+  importTours(file: File): Observable<Tour[]> {
+    const formData = new FormData();
+    formData.append('file', file);
+    return this.http.post<Tour[]>(`${this.baseUrl}/import`, formData);
+  }
+
+  downloadGpx(id: string): void {
+    window.location.href = `${this.baseUrl}/${id}/gpx`;
+  }
 }

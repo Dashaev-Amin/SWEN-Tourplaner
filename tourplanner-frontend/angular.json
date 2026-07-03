@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "f0f65335-4e21-4165-9044-4f88eaa0e4b9"
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -50,7 +51,11 @@
               }
             ],
             "styles": [
+              "node_modules/leaflet/dist/leaflet.css",
               "src/styles.css"
+            ],
+            "polyfills": [
+              "zone.js"
             ]
           },
           "configurations": {

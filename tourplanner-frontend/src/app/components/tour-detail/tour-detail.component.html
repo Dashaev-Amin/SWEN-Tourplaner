@@ -8,6 +8,9 @@
       <h2>{{ tour.name }}</h2>
       <div class="detail-actions">
         <button class="btn btn-primary" (click)="onEdit()">Bearbeiten</button>
+        @if (tour.routeGeometry) {
+          <button class="btn btn-secondary" (click)="onDownloadGpx()">GPX</button>
+        }
         <button class="btn btn-danger" (click)="onDelete()">Loeschen</button>
       </div>
     </div>
@@ -40,6 +43,22 @@
         </div>
       </div>
 
+      <div class="badges">
+        <span class="badge"
+              [class.badge-green]="tour.popularityLevel === 'Beliebt'"
+              [class.badge-yellow]="tour.popularityLevel === 'Bekannt'"
+              [class.badge-gray]="tour.popularityLevel === 'Unbeliebt'">
+          {{ tour.popularityLevel }} ({{ tour.popularityCount }} Logs)
+        </span>
+        <span class="badge"
+              [class.badge-green]="tour.childFriendliness === 'Kinderfreundlich'"
+              [class.badge-yellow]="tour.childFriendliness === 'Bedingt geeignet'"
+              [class.badge-red]="tour.childFriendliness === 'Nicht kinderfreundlich'"
+              [class.badge-gray]="tour.childFriendliness === 'Unbekannt'">
+          {{ tour.childFriendliness }}
+        </span>
+      </div>
+
       @if (tour.description) {
         <div class="description">
           <span class="label">Beschreibung:</span>
@@ -47,21 +66,22 @@
         </div>
       }
 
-      <!-- Tourbild oder Platzhalter -->
-      @if (tour.routeImage) {
-        <div class="tour-image">
-          <img [src]="tour.routeImage" alt="Tourbild">
-        </div>
+      <!-- Leaflet Karte -->
+      @if (tour.routeGeometry) {
+        <div #mapContainer class="route-map"></div>
       } @else {
-        <div class="image-placeholder">
-          <p>Kein Bild</p>
+        <div class="map-placeholder">
+          <p>Keine Routendaten vorhanden</p>
         </div>
       }
 
-      <!-- Karten-Platzhalter -->
-      <div class="map-placeholder">
-        <p>Karte wird spaeter hier angezeigt</p>
-      </div>
+      <!-- Gespeichertes Kartenbild -->
+      @if (tour.routeImage) {
+        <div class="static-map-section">
+          <span class="label">Kartenbild:</span>
+          <img class="static-map-img" [src]="tour.routeImage" alt="Kartenbild der Route">
+        </div>
+      }
     </div>
   }
 </div>
